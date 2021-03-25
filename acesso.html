@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/acesso_styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+  <title>Login page</title>
+</head>
+
+<body class="bg" >
+  <!-- background="img/fundo.jpg" width="100" heigth="100"-->
+  <div class="container" >
+    <div class="container-login">
+      <form class="form-box">
+        <section class="acesso__logo" >
+        <img class="avatar" src="img/logo.png" alt="user login">
+        </section>
+        <section class="acesso">
+          <div class="welcome">Acesso Restrito</div>
+        <span>
+          <label for="user-name"><img src="img/user-icon.svg" alt="User name"></label>
+          <input type="email" placeholder="Username">
+        </span>
+        
+        <span>
+          <label for="user-password"><img src="img/pass-icon.svg" alt="User password"></label>
+          <input type="password" placeholder="Password">
+        </span>
+        <button onclick="redirecionar()">Login</button>
+        </section>
+      </form>
+       <script>
+        function redirecionar() {
+          event.preventDefault() 
+          window.location.href = "home.html";
+          
+        }
+       </script>
+    </div>
+  </div>
+
+</body>
+
+</html>

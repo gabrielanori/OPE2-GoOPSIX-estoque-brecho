@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.5/examples/checkout/form-validation.css">
+    <link rel="stylesheet" href="./css/base/base.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+<body>
+    <header class="cabecalho container">
+        <img src="./img/logo.png" alt="logo" class="cabecalho__logo">
+        <nav>
+            <ul class="cabecalho__lista-navegacao">
+                <li class="cabecalho__link"> Seja Bem Vindo ao nosso Controle de Estoque! </li>
+             
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main class=" segundo--container flex flex--centro flex--coluna">
+        
+        <section>
+            <section class="cartao cadastro">
+                <h1 class="cartao__titulo">Movimentação de Produtos</h1>
+                <form class="flex flex--coluna">
+                
+                    <button class="botao"><a href="#modal">Entrada</a></button>
+                    <button class="botao"><a href="#modal2">Saída</a></button>
+                </form>
+            </section>    
+            <section class="cartao cadastro">
+                <h1 class="cartao__titulo"> Novo Cadastro </h1>
+                <form class="flex flex--coluna">
+                    <button class="botao" ><a href="#modal3">Produto</a></button>
+                    <button class="botao" onclick="baixar()">Fornecedor</button>
+                    <button class="botao" onclick="baixar()">Usuário</button>
+                </form>
+            </section>
+            <section class="cartao cadastro">
+                <h1 class="cartao__titulo"> Relatório </h1>
+                <form  class="flex flex--coluna">
+                
+                    <button class="botao" onclick="baixar()">Gerar relatório</button>
+                </form>
+            </section>
+            <section class="cartao cadastro">
+                <h1 class="cartao__titulo"> Inativar </h1>
+                <form  class="flex flex--coluna">
+                
+                    <button class="botao">Fornecedor</button>
+                    <button class="botao">Usuário</button>
+                </form>
+            </section>
+        </section>
+       
+    </main>
+
+    <div class="modal" id="modal" tabindex="-1">
+        <a href="#" class="modal__overlay" aria-label="Fechar"></a>
+        <div class="modal__content">
+        <a href="#" class="modal__close" aria-label="Fechar">x</a>
+        <div><div class="col-md-8 order-md-1">
+            <h4 class="mb-3">ENTRADA DE PRODUTO</h4>
+            
+                  <label for="country">Modelo</label>
+                  <select class="custom-select d-block w-100" id="country" required>
+                    <option value="" selected disabled>Escolha...</option>
+                    <option value="AF">Calça</option>
+                    <option value="AX">Camiseta</option>
+                    <option value="AL">Vestido</option>
+                    <option value="DZ">Biquini</option>
+                    <option value="AS">Sapato</option>
+                    <option value="AD">Bolsa</option>
+                    <option value="AO">Cinto</option>
+                    <option value="AI">Shorts</option>
+                    <option value="AQ">Saia</option>
+                    <option value="AG">Lenço</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+                <br>
+                <div class="col-md-4 mb-3">
+                  <label for="state">Preço</label>
+                  <select class="custom-select d-block w-100" id="state" required>
+                    <option value="" selected disabled>Escolha...</option>
+                    <option>10,00</option>
+                    <option>20,00</option>
+                    <option>30,00</option>
+                    <option>40,00</option>
+                    <option>50,00</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="zip">Quantidade</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Is required.
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-4">
+              <label for="country">Marca</label>
+              <select class="custom-select d-block w-100" id="country" required>
+                <option value="" selected disabled>Escolha...</option>
+
+                <option value="AX">Tommy</option>
+                <option value="AL">Calvin Klein</option>
+                <option value="DZ">Levis</option>
+                <option value="AS">Adidas</option>
+                <option value="AD">Nike</option>
+                <option value="AO">Asics</option>
+                <option value="AI">Under Armour</option>
+                <option value="AF">Outras</option>
+
+              </select>
+              <hr class="mb-4">
+    
+              <h4 class="mb-3">Tamanho</h4>
+    
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                  <label class="custom-control-label" for="credit">P</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="debit">M</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="paypal">G</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="paypal">GG</label>
+                  </div>
+              </div>
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="sucesso()">Efetuar Entrada</button>
+            </form>
+          </div>
+        </div>
+
+
+
+        <div class="modal" id="modal2" tabindex="-1">
+            <a href="#" class="modal__overlay" aria-label="Fechar"></a>
+            <div class="modal__content">
+            <a href="#" class="modal__close" aria-label="Fechar">x</a>
+            <div><div class="col-md-8 order-md-1">
+                <h4 class="mb-3">SAÍDA DE PRODUTO</h4>
+                
+                      <label for="country">Modelo</label>
+                      <select class="custom-select d-block w-100" id="country" required>
+                        <option value="" selected disabled>Escolha...</option>
+                        <option value="AF">Calça</option>
+                        <option value="AX">Camiseta</option>
+                        <option value="AL">Vestido</option>
+                        <option value="DZ">Biquini</option>
+                        <option value="AS">Sapato</option>
+                        <option value="AD">Bolsa</option>
+                        <option value="AO">Cinto</option>
+                        <option value="AI">Shorts</option>
+                        <option value="AQ">Saia</option>
+                        <option value="AG">Lenço</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+                    <br>
+                    <div class="col-md-4 mb-3">
+                      <label for="state">Preço</label>
+                      <select class="custom-select d-block w-100" id="state" required>
+                        <option value="" selected disabled>Escolha...</option>
+                        <option>10,00</option>
+                        <option>20,00</option>
+                        <option>30,00</option>
+                        <option>40,00</option>
+                        <option>50,00</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="zip">Quantidade</label>
+                      <input type="text" class="form-control" id="zip" placeholder="" required>
+                      <div class="invalid-feedback">
+                        Is required.
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <label for="country">Marca</label>
+                  <select class="custom-select d-block w-100" id="country" required>
+                    <option value="" selected disabled>Escolha...</option>
+    
+                    <option value="AX">Tommy</option>
+                    <option value="AL">Calvin Klein</option>
+                    <option value="DZ">Levis</option>
+                    <option value="AS">Adidas</option>
+                    <option value="AD">Nike</option>
+                    <option value="AO">Asics</option>
+                    <option value="AI">Under Armour</option>
+                    <option value="AF">Outras</option>
+    
+                  </select>
+                  <hr class="mb-4">
+        
+                  <h4 class="mb-3">Tamanho</h4>
+        
+                  <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                      <label class="custom-control-label" for="credit">P</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                      <label class="custom-control-label" for="debit">M</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                      <label class="custom-control-label" for="paypal">G</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="paypal">GG</label>
+                      </div>
+                  </div>
+                  <hr class="mb-4">
+                  <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="sucesso()">Efetuar Saída</button>
+                </form>
+              </div>
+            </div>
+    
+
+
+
+
+
+            <div class="modal" id="modal3" tabindex="-1">
+                <a href="#" class="modal__overlay" aria-label="Fechar"></a>
+                <div class="modal__content">
+                <a href="#" class="modal__close" aria-label="Fechar">x</a>
+                <div><div class="col-md-8 order-md-1">
+                    <h4 class="mb-3">NOVO CADASTRO DE PRODUTO</h4>
+                    
+                          <label for="country">Modelo</label>
+                          <select class="custom-select d-block w-100" id="country" required>
+                            <option value="" selected disabled>Escolha...</option>
+                            <option value="AF">Calça</option>
+                            <option value="AX">Camiseta</option>
+                            <option value="AL">Vestido</option>
+                            <option value="DZ">Biquini</option>
+                            <option value="AS">Sapato</option>
+                            <option value="AD">Bolsa</option>
+                            <option value="AO">Cinto</option>
+                            <option value="AI">Shorts</option>
+                            <option value="AQ">Saia</option>
+                            <option value="AG">Lenço</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please select a valid country.
+                          </div>
+                        </div>
+                        <br>
+                        <div class="col-md-4 mb-3">
+                          <label for="state">Preço</label>
+                          <select class="custom-select d-block w-100" id="state" required>
+                            <option value="" selected disabled>Escolha...</option>
+                            <option>10,00</option>
+                            <option>20,00</option>
+                            <option>30,00</option>
+                            <option>40,00</option>
+                            <option>50,00</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please provide a valid state.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label for="zip">Quantidade</label>
+                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <div class="invalid-feedback">
+                            Is required.
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="mb-4">
+                      <label for="country">Marca</label>
+                      <select class="custom-select d-block w-100" id="country" required>
+                        <option value="" selected disabled>Escolha...</option>
+        
+                        <option value="AX">Tommy</option>
+                        <option value="AL">Calvin Klein</option>
+                        <option value="DZ">Levis</option>
+                        <option value="AS">Adidas</option>
+                        <option value="AD">Nike</option>
+                        <option value="AO">Asics</option>
+                        <option value="AI">Under Armour</option>
+                        <option value="AF">Outras</option>
+        
+                      </select>
+
+                      <hr class="mb-4">
+                      <label for="country">Fornecedor</label>
+                      <select class="custom-select d-block w-100" id="country" required>
+                        <option value="" selected disabled>Escolha...</option>
+        
+                        <option value="AX">Look</option>
+                        <option value="AL">Belissima</option>
+                        <option value="DZ">Camila`s Fashion</option>
+                        <option value="AS">Amanda</option>
+                        <option value="AD">Dandara</option>
+                        <option value="AO">Outlet</option>
+                        <option value="AI">Louney</option>
+                        <option value="AF">Outras</option>
+        
+                      </select>
+
+                      <hr class="mb-4">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="same-address">
+                        <label class="custom-control-label" for="same-address">Adicionar um novo ID</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="save-info">
+                        <label class="custom-control-label" for="save-info">Produto com ID existente</label>
+                        <input type="text" class="form-control" id="zip" placeholder="" required>
+                        <div class="invalid-feedback">
+                      </div>
+                      <hr class="mb-4">
+            
+            
+                      <h4 class="mb-3">Tamanho</h4>
+            
+                      <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                          <label class="custom-control-label" for="credit">P</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="debit">M</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="paypal">G</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="paypal">GG</label>
+                          </div>
+                      </div>
+                      <hr class="mb-4">
+                      <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="sucesso()">Efetuar Cadastro</button>
+                    </form>
+                  </div>
+                </div>
+        
+       
+            
+     
+
+
+
+
+
+
+        <div class="modal" id="modalfim" tabindex="-1">
+            <a href="#" class="modal__overlay" aria-label="Fechar"></a>
+            <div class="modal__content">
+            <a href="#" class="modal__close" aria-label="Fechar">x</a>
+            <div><div class="col-md-8 order-md-1">
+                <section > Seu Produto foi Cadastrado com Sucesso!</section>
+            </div>
+
+
+    <script>
+        function cadastrar() {
+          event.preventDefault() 
+          window.location.href = "cadastro_produto.html";
+        }
+
+        function baixar() {
+          event.preventDefault() 
+          window.location.href = "baixa_produto.html";
+        }
+        function sucesso() {
+          event.preventDefault() 
+          window.location.href = "#modalfim";
+        }
+
+       </script>
+    <script src="./js/app.js" type="module"></script>
+    
+</body>
+</html>
