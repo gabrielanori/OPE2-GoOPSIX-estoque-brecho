@@ -9,6 +9,9 @@ section{
     align-self: center;
 
 }
+a:link {
+    text-decoration: none;
+}
 
 h1{
     display: flex;

@@ -33,9 +33,9 @@ const mensagensDeErro = {
         valueMissing: 'O campo de senha não pode estar vazio.',
         patternMismatch: 'A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos.'
     },
-    dataNascimento: {
-        valueMissing: 'O campo de data de nascimento não pode estar vazio.',
-        customError: 'Você deve ser maior que 18 anos para se cadastrar.'
+    telefone: {
+        valueMissing: 'O campo de telefone não pode estar vazio.',
+        customError: 'O TEL digitado não é válido.'
     },
     cpf: {
         valueMissing: 'O campo de CPF não pode estar vazio.',
@@ -61,7 +61,7 @@ const mensagensDeErro = {
 }
 
 const validadores = {
-    dataNascimento:input => validaDataNascimento(input),
+    telefone:input => validaTelefone(input),
     cpf:input => validaCPF(input),
     cep:input => recuperarCEP(input)
 }
@@ -77,22 +77,39 @@ function mostraMensagemDeErro(tipoDeInput, input) {
     return mensagem
 }
 
-function validaDataNascimento(input) {
-    const dataRecebida = new Date(input.value)
+function validaTelefone(input) {
+    const telFormatado = input.value.replace(/\D/g, '')
     let mensagem = ''
 
-    if(!maiorQue18(dataRecebida)) {
-        mensagem = 'Você deve ser maior que 18 anos para se cadastrar.'
+    if(!checaTelRepetido(cpfFormatado) || !checaEstruturaTel(telFormatado)) {
+        mensagem = 'O Tel digitado não é válido.'
     }
 
     input.setCustomValidity(mensagem)
 }
 
-function maiorQue18(data) {
-    const dataAtual = new Date()
-    const dataMais18 = new Date(data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate())
+function validaTelefone(tel) {
+    const valoresRepetidos = [
+        '00000000000',
+        '11111111111',
+        '22222222222',
+        '33333333333',
+        '44444444444',
+        '55555555555',
+        '66666666666',
+        '77777777777',
+        '88888888888',
+        '99999999999'
+    ]
+    let telValido = true
+    
+    valoresRepetidos.forEach(valor => {
+        if(valor == tel) {
+            telValido = false
+        }
+    })
 
-    return dataMais18 <= dataAtual
+    return telValido
 }
 
 function validaCPF(input) {

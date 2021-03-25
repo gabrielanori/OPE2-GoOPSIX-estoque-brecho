@@ -23,9 +23,7 @@
         </nav>
     </header>
 
-   
     <main class=" segundo--container flex flex--centro flex--coluna">
-        
         <section>
             <section class="cartao cadastro">
                 <h1 class="cartao__titulo">Movimentação de Produtos</h1>
@@ -59,7 +57,6 @@
                 </form>
             </section>
         </section>
-       
     </main>
 
     <div class="modal" id="modal" tabindex="-1">
@@ -69,8 +66,8 @@
         <div><div class="col-md-8 order-md-1">
             <h4 class="mb-3">ENTRADA DE PRODUTO</h4>
             <hr class="mb-4">
-                  <label for="country">Modelo</label>
-                  <select class="custom-select d-block w-100" id="country" required>
+                  <label for="modelo">Modelo</label>
+                  <select class="custom-select d-block w-100" id="modelo" required>
                     <option value="" selected disabled>Escolha...</option>
                     <option value="AF">Calça</option>
                     <option value="AX">Camiseta</option>
@@ -84,13 +81,13 @@
                     <option value="AG">Lenço</option>
                   </select>
                   <div class="invalid-feedback">
-                    Please select a valid country.
+                    Selecione uma opção valida
                   </div>
                 </div>
                 <br>
                 <div class="col-md-4 mb-3">
-                  <label for="state">Preço</label>
-                  <select class="custom-select d-block w-100" id="state" required>
+                  <label for="preco">Preço</label>
+                  <select class="custom-select d-block w-100" id="preco" required>
                     <option value="" selected disabled>Escolha...</option>
                     <option>10,00</option>
                     <option>20,00</option>
@@ -99,20 +96,33 @@
                     <option>50,00</option>
                   </select>
                   <div class="invalid-feedback">
-                    Please provide a valid state.
+                    Selecione uma opção valida
                   </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                  <label for="zip">Quantidade</label>
-                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                  <label for="quantidade">Quantidade</label>
+                  <input type="text" class="form-control" id="quantidade" placeholder="" required>
                   <div class="invalid-feedback">
-                    Is required.
+                    Digite uma informação válida
                   </div>
                 </div>
               </div>
               <hr class="mb-4">
-              <label for="country">Marca</label>
-              <select class="custom-select d-block w-100" id="country" required>
+              <label for="fornecedor">Fornecedor</label>
+              <select class="custom-select d-block w-100" id="fornecedor" required>
+                <option value="" selected disabled>Escolha...</option>
+                <option value="AX">Look</option>
+                <option value="AL">Belissima</option>
+                <option value="DZ">Camila`s Fashion</option>
+                <option value="AS">Amanda</option>
+                <option value="AD">Dandara</option>
+                <option value="AO">Outlet</option>
+                <option value="AI">Louney</option>
+                <option value="AF">Outras</option>
+              </select>
+              <hr class="mb-4">
+              <label for="marca">Marca</label>
+              <select class="custom-select d-block w-100" id="marca" required>
                 <option value="" selected disabled>Escolha...</option>
                 <option value="AX">Tommy</option>
                 <option value="AL">Calvin Klein</option>
@@ -127,20 +137,20 @@
               <h4 class="mb-3">Tamanho</h4>
               <div class="d-block my-3">
                 <div class="custom-control custom-radio">
-                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                  <label class="custom-control-label" for="credit">P</label>
+                  <input id="pequeno" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                  <label class="custom-control-label" for="pequeno">P</label>
                 </div>
                 <div class="custom-control custom-radio">
-                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="debit">M</label>
+                  <input id="medio" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="medio">M</label>
                 </div>
                 <div class="custom-control custom-radio">
-                  <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                  <label class="custom-control-label" for="paypal">G</label>
+                  <input id="grande" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="grande">G</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                    <label class="custom-control-label" for="paypal">GG</label>
+                    <input id="grandeplus" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="grandeplus">GG</label>
                   </div>
               </div>
               <hr class="mb-4">
@@ -158,8 +168,8 @@
             <div><div class="col-md-8 order-md-1">
                 <h4 class="mb-3">SAÍDA DE PRODUTO</h4>
                 <hr class="mb-4">
-                      <label for="country">Modelo</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <label for="modelo">Modelo</label>
+                      <select class="custom-select d-block w-100" id="modelo" required>
                         <option value="" selected disabled>Escolha...</option>
                         <option value="AF">Calça</option>
                         <option value="AX">Camiseta</option>
@@ -173,13 +183,13 @@
                         <option value="AG">Lenço</option>
                       </select>
                       <div class="invalid-feedback">
-                        Please select a valid country.
+                        Selecione uma opção valida
                       </div>
                     </div>
                     <br>
                     <div class="col-md-4 mb-3">
-                      <label for="state">Preço</label>
-                      <select class="custom-select d-block w-100" id="state" required>
+                      <label for="preco">Preço</label>
+                      <select class="custom-select d-block w-100" id="preco" required>
                         <option value="" selected disabled>Escolha...</option>
                         <option>10,00</option>
                         <option>20,00</option>
@@ -188,20 +198,33 @@
                         <option>50,00</option>
                       </select>
                       <div class="invalid-feedback">
-                        Please provide a valid state.
+                        Selecione uma opção valida
                       </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                      <label for="zip">Quantidade</label>
-                      <input type="text" class="form-control" id="zip" placeholder="" required>
+                      <label for="quantidade">Quantidade</label>
+                      <input type="text" class="form-control" id="quantidade" placeholder="" required>
                       <div class="invalid-feedback">
-                        Is required.
+                        Digite uma informação válida
                       </div>
                     </div>
                   </div>
                   <hr class="mb-4">
-                  <label for="country">Marca</label>
-                  <select class="custom-select d-block w-100" id="country" required>
+                  <label for="fornecedor">Fornecedor</label>
+                  <select class="custom-select d-block w-100" id="fornecedor" required>
+                    <option value="" selected disabled>Escolha...</option>
+                    <option value="AX">Look</option>
+                    <option value="AL">Belissima</option>
+                    <option value="DZ">Camila`s Fashion</option>
+                    <option value="AS">Amanda</option>
+                    <option value="AD">Dandara</option>
+                    <option value="AO">Outlet</option>
+                    <option value="AI">Louney</option>
+                    <option value="AF">Outras</option>
+                  </select>
+                  <hr class="mb-4">
+                  <label for="marca">Marca</label>
+                  <select class="custom-select d-block w-100" id="marca" required>
                     <option value="" selected disabled>Escolha...</option>
                     <option value="AX">Tommy</option>
                     <option value="AL">Calvin Klein</option>
@@ -216,20 +239,20 @@
                   <h4 class="mb-3">Tamanho</h4>
                   <div class="d-block my-3">
                     <div class="custom-control custom-radio">
-                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                      <label class="custom-control-label" for="credit">P</label>
+                      <input id="P" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                      <label class="custom-control-label" for="P">P</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                      <label class="custom-control-label" for="debit">M</label>
+                      <input id="M" name="paymentMethod" type="radio" class="custom-control-input" required>
+                      <label class="custom-control-label" for="M">M</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                      <label class="custom-control-label" for="paypal">G</label>
+                      <input id="G" name="paymentMethod" type="radio" class="custom-control-input" required>
+                      <label class="custom-control-label" for="G">G</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                        <label class="custom-control-label" for="paypal">GG</label>
+                        <input id="GG" name="paymentMethod" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="GG">GG</label>
                       </div>
                   </div>
                   <hr class="mb-4">
@@ -238,8 +261,6 @@
               </div>
             </div>
     
-
-
        
             <div class="modal" id="modal3" tabindex="-1">
                 <a href="#" class="modal__overlay" aria-label="Fechar"></a>
@@ -248,8 +269,8 @@
                 <div><div class="col-md-8 order-md-1">
                     <h4 class="mb-3">NOVO CADASTRO DE PRODUTO</h4>
                     <hr class="mb-4">
-                          <label for="country">Modelo</label>
-                          <select class="custom-select d-block w-100" id="country" required>
+                          <label for="modelo">Modelo</label>
+                          <select class="custom-select d-block w-100" id="modelo" required>
                             <option value="" selected disabled>Escolha...</option>
                             <option value="AF">Calça</option>
                             <option value="AX">Camiseta</option>
@@ -263,13 +284,13 @@
                             <option value="AG">Lenço</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please select a valid country.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <br>
                         <div class="col-md-4 mb-3">
-                          <label for="state">Preço</label>
-                          <select class="custom-select d-block w-100" id="state" required>
+                          <label for="preco">Preço</label>
+                          <select class="custom-select d-block w-100" id="preco" required>
                             <option value="" selected disabled>Escolha...</option>
                             <option>10,00</option>
                             <option>20,00</option>
@@ -278,20 +299,20 @@
                             <option>50,00</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please provide a valid state.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                          <label for="zip">Quantidade</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <label for="quantidade">Quantidade</label>
+                          <input type="text" class="form-control" id="quantidade" placeholder="" required>
                           <div class="invalid-feedback">
-                            Is required.
+                            Digite uma informação válida
                           </div>
                         </div>
                       </div>
                       <hr class="mb-4">
-                      <label for="country">Marca</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <label for="marca">Marca</label>
+                      <select class="custom-select d-block w-100" id="marca" required>
                         <option value="" selected disabled>Escolha...</option>
                         <option value="AX">Tommy</option>
                         <option value="AL">Calvin Klein</option>
@@ -303,8 +324,8 @@
                         <option value="AF">Outras</option>
                       </select>
                       <hr class="mb-4">
-                      <label for="country">Fornecedor</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <label for="fornecedor">Fornecedor</label>
+                      <select class="custom-select d-block w-100" id="fornecedor" required>
                         <option value="" selected disabled>Escolha...</option>
                         <option value="AX">Look</option>
                         <option value="AL">Belissima</option>
@@ -317,12 +338,12 @@
                       </select>
                       <hr class="mb-4">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Adicionar um novo ID</label>
+                        <input type="checkbox" class="custom-control-input" id="newid">
+                        <label class="custom-control-label" for="newid">Adicionar um novo ID</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Produto com ID existente</label>
+                        <input type="checkbox" class="custom-control-input" id="checkid">
+                        <label class="custom-control-label" for="checkid">Produto com ID existente</label>
                         <input type="text" class="form-control" id="zip" placeholder="" required>
                         <div class="invalid-feedback">
                       </div>
@@ -330,20 +351,20 @@
                       <h4 class="mb-3">Tamanho</h4>
                       <div class="d-block my-3">
                         <div class="custom-control custom-radio">
-                          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                          <label class="custom-control-label" for="credit">P</label>
+                          <input id="peq" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                          <label class="custom-control-label" for="peq">P</label>
                         </div>
                         <div class="custom-control custom-radio">
-                          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                          <label class="custom-control-label" for="debit">M</label>
+                          <input id="med" name="paymentMethod" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="med">M</label>
                         </div>
                         <div class="custom-control custom-radio">
-                          <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                          <label class="custom-control-label" for="paypal">G</label>
+                          <input id="grd" name="paymentMethod" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="grd">G</label>
                         </div>
                         <div class="custom-control custom-radio">
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                            <label class="custom-control-label" for="paypal">GG</label>
+                            <input id="exgrd" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="exgrd">GG</label>
                           </div>
                       </div>
                       <hr class="mb-4">
@@ -353,9 +374,6 @@
                 </div>
                 </div>
             </div>
-            
-
-
 
 
             <div class="modal" id="modal4" tabindex="-1">
@@ -368,99 +386,102 @@
                     <form class="needs-validation" novalidate>
                       <div class="row">
                         <div class="mb-3">
-                          <label for="firstName">Responsável</label>
-                          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                          <label for="responsavel">Responsável</label>
+                          <input type="text" class="form-control" id="responsavel" placeholder="" value="" required>
                           <div class="invalid-feedback" style="width: 100%">
-                            Valid first name is required.
+                            Digite uma informação válida
                           </div>
                         </div>
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="username">Telefone</label>
+                        <label for="tel">Telefone</label>
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">N°</span>
                           </div>
-                          <input type="text" class="form-control" id="username" placeholder="Ex: (99) 99999-9999" required>
+                          <input type="text" class="form-control" id="tel" placeholder="Ex: (99) 99999-9999" required>
                           <div class="invalid-feedback" style="width: 100%;">
-                            Your username is required.
+                            Digite uma informação válida
                           </div>
                         </div>
                       </div>
                       <div class="mb-3">
                         <label for="email">Email <span class="text-muted">(Opcional)</span></label>
                         <input type="email" class="form-control" id="email" autocomplete="email" maxlength="256"
-                          placeholder="you@example.com">
+                          placeholder="email@exemplo.com">
                         <div class="invalid-feedback">
-                          Please enter a valid email address for shipping updates.
+                            Digite uma informação válida
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="address">Endereço</label>
-                        <input type="text" class="form-control" id="address" placeholder="Ex: Rua Augusta, 222" required>
+                        <label for="logradouro">Endereço</label>
+                        <input type="text" class="form-control" id="logradouro" placeholder="Ex: Rua Augusta, 222" required>
                         <div class="invalid-feedback">
-                          Please enter your shipping address.
+                            Digite uma informação válida
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
-                        <input type="text" class="form-control" id="address2" placeholder="Apartmento | Bloco">
+                        <label for="complemento">Complemento <span class="text-muted">(Opcional)</span></label>
+                        <input type="text" class="form-control" id="complemento" placeholder="Apartmento | Bloco">
                       </div>
                       <div class="row">
                         <div class="col-md-5 mb-3">
-                          <label for="country">Estado</label>
-                          <select class="custom-select d-block w-100" id="country" required>
+                          <label for="estado">Estado</label>
+                          <select class="custom-select d-block w-100" id="estado" required>
                             <option value="" selected disabled>Escolha...</option>
-                            <option value="BR">Brazil</option>
-                            <option value="ZW">Outro</option>
+                            <option>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                            <option >Outro</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please select a valid country.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                          <label for="state">Cidade</label>
-                          <select class="custom-select d-block w-100" id="state" required>
+                          <label for="cidade">Cidade</label>
+                          <select class="custom-select d-block w-100" id="cidade" required>
                             <option value="" selected disabled>Escolha...</option>
-                            <option>California</option>
+                            <option>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Outro</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please provide a valid state.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                          <label for="zip">CEP</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <label for="cep">CEP</label>
+                          <input type="text" class="form-control" id="cep" placeholder="" required>
                           <div class="invalid-feedback">
-                            Zip code required.
+                            Digite uma informação válida
                           </div>
                         </div>
                       </div>
                       <hr class="mb-4">
                 <div><div class="order-md-1 mb-3" >
-                          <label for="country">Registro</label>
-                          <select class="custom-select d-block w-100" id="country" required>
+                          <label for="registro">Registro</label>
+                          <select class="custom-select d-block w-100" id="registro" required>
                             <option value="" selected disabled>Escolha...</option>
                             <option value="AF">CPF</option>
                             <option value="AX">CNPJ</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please select a valid country.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <br>
                         <div class="mb-3">
-                          <label for="zip">Número</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <label for="numreg">Número</label>
+                          <input type="text" class="form-control" id="numreg" placeholder="" required>
                           <div class="invalid-feedback">
-                            Is required.
+                            Digite uma informação válida
                           </div>
                         </div>
                       </div>
                       <hr class="mb-4">
-                      <label for="country">Marca</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <label for="marca">Marca</label>
+                      <select class="custom-select d-block w-100" id="marca" required>
                         <option value="" selected disabled>Escolha...</option>
                         <option value="AX">Tommy</option>
                         <option value="AL">Calvin Klein</option>
@@ -473,12 +494,12 @@
                       </select>
                       <hr class="mb-4">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Adicionar um novo ID</label>
+                        <input type="checkbox" class="custom-control-input" id="addid2">
+                        <label class="custom-control-label" for="addid2">Adicionar um novo ID</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Produto com ID existente</label>
+                        <input type="checkbox" class="custom-control-input" id="checkid2">
+                        <label class="custom-control-label" for="checkid2">Produto com ID existente</label>
                         <input type="text" class="form-control" id="zip" placeholder="" required>
                         <div class="invalid-feedback">
                       </div>
@@ -491,9 +512,6 @@
             </div>
         
 
-
-
-
             <div class="modal" id="modal5" tabindex="-1">
                 <a href="#" class="modal__overlay" aria-label="Fechar"></a>
                 <div class="modal__content">
@@ -504,23 +522,23 @@
                     <form class="needs-validation" novalidate>
                       <div class="row">
                         <div class="mb-3">
-                          <label for="firstName">Nome</label>
-                          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                          <label for="nome">Nome</label>
+                          <input type="text" class="form-control" id="nome" placeholder="" value="" required>
                           <div class="invalid-feedback" style="width: 100%">
-                            Valid first name is required.
+                            Digite uma informação válida
                           </div>
                         </div>
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="username">Telefone</label>
+                        <label for="tel">Telefone</label>
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">N°</span>
                           </div>
-                          <input type="text" class="form-control" id="username" placeholder="Ex: (99) 99999-9999" required>
+                          <input type="text" class="form-control" id="tel" placeholder="Ex: (99) 99999-9999" required>
                           <div class="invalid-feedback" style="width: 100%;">
-                            Your username is required.
+                            Digite uma informação válida
                           </div>
                         </div>
                       </div>
@@ -529,79 +547,82 @@
                         <input type="email" class="form-control" id="email" autocomplete="email" maxlength="256"
                           placeholder="email@exemplo.com">
                         <div class="invalid-feedback">
-                          Please enter a valid email address for shipping updates.
+                            Digite uma informação válida
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="address">Endereço</label>
-                        <input type="text" class="form-control" id="address" placeholder="Ex: Rua Augusta, 222" required>
+                        <label for="logradouro">Endereço</label>
+                        <input type="text" class="form-control" id="logradouro" placeholder="Ex: Rua Augusta, 222" required>
                         <div class="invalid-feedback">
-                          Please enter your shipping address.
+                            Digite uma informação válida
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
-                        <input type="text" class="form-control" id="address2" placeholder="Apartmento | Bloco">
+                        <label for="complemento">Complemento <span class="text-muted">(Opcional)</span></label>
+                        <input type="text" class="form-control" id="complemento" placeholder="Apartmento | Bloco">
                       </div>
                       <div class="row">
                         <div class="col-md-5 mb-3">
-                          <label for="country">Estado</label>
-                          <select class="custom-select d-block w-100" id="country" required>
+                          <label for="estado">Estado</label>
+                          <select class="custom-select d-block w-100" id="estado" required>
                             <option value="" selected disabled>Escolha...</option>
-                            <option value="BR">Brazil</option>
-                            <option value="ZW">Outro</option>
+                            <option>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                            <option >Outro</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please select a valid country.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                          <label for="state">Cidade</label>
-                          <select class="custom-select d-block w-100" id="state" required>
+                          <label for="cidade">Cidade</label>
+                          <select class="custom-select d-block w-100" id="cidade" required>
                             <option value="" selected disabled>Escolha...</option>
-                            <option>California</option>
+                            <option>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Outro</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please provide a valid state.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                          <label for="zip">CEP</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <label for="cep">CEP</label>
+                          <input type="text" class="form-control" id="cep" placeholder="" required>
                           <div class="invalid-feedback">
-                            Zip code required.
+                            Digite uma informação válida
                           </div>
                         </div>
                       </div>
                       <hr class="mb-4">
                 <div><div class="order-md-1 mb-3" >
-                          <label for="country">Registro</label>
-                          <select class="custom-select d-block w-100" id="country" required>
+                          <label for="registro">Registro</label>
+                          <select class="custom-select d-block w-100" id="registro" required>
                             <option value="" selected disabled>Escolha...</option>
                             <option value="AF">CPF</option>
                             <option value="AX">CNPJ</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please select a valid country.
+                            Selecione uma opção valida
                           </div>
                         </div>
                         <br>
                         <div class="mb-3">
-                          <label for="zip">Número</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <label for="numreg">Número</label>
+                          <input type="text" class="form-control" id="numreg" placeholder="" required>
                           <div class="invalid-feedback">
-                            Is required.
+                            Digite uma informação válida
                           </div>
                         </div>
                       </div>
                       <hr class="mb-4">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Adicionar um novo ID</label>
+                        <input type="checkbox" class="custom-control-input" id="addid3">
+                        <label class="custom-control-label" for="addid3">Adicionar um novo ID</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Produto com ID existente</label>
+                        <input type="checkbox" class="custom-control-input" id="checkid3">
+                        <label class="custom-control-label" for="checkid3">Produto com ID existente</label>
                         <input type="text" class="form-control" id="zip" placeholder="" required>
                         <div class="invalid-feedback">
                       </div>
@@ -614,9 +635,6 @@
             </div>
 
 
-
-
-
             <div class="modal" id="modal6" tabindex="-1">
                 <a href="#" class="modal__overlay" aria-label="Fechar"></a>
                 <div class="modal__content">
@@ -626,22 +644,23 @@
                 <hr class="mb-4">
                     <form class="needs-validation" novalidate>
                         <div class=" mb-3">
-                            <label for="country">Usuário</label>
-                            <select class="custom-select d-block w-100" id="country" required>
+                            <label for="usuario">Usuário</label>
+                            <select class="custom-select d-block w-100" id="usuario" required>
                               <option value="" selected disabled>Escolha...</option>
-                              <option value="BR">Amanda</option>
-                              <option value="ZW">Maria</option>
+                              <option >Todos</option>
+                              <option >Amanda</option>
+                              <option >Maria</option>
                             </select>
                             <div class="invalid-feedback">
-                              Please select a valid 
+                                Selecione uma opção valida
                             </div>
                           </div>
                           <hr class="mb-4">
                           <h4 class="mb-3">Período</h4>
                       <div class="row">
                         <div class="col-md-4 mb-3">
-                          <label for="state">Ano</label>
-                          <select class="custom-select d-block w-100" id="state" required>
+                          <label for="ano">Ano</label>
+                          <select class="custom-select d-block w-100" id="ano" required>
                             <option value="" selected disabled>Escolha...</option>
                             <option>2011</option>
                             <option>2012</option>
@@ -656,12 +675,12 @@
                             <option>2021</option>
                           </select>
                           <div class="invalid-feedback">
-                            Please provide a valid state.
+                            Digite uma informação válida
                           </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="state">Mês</label>
-                            <select class="custom-select d-block w-100" id="state" required>
+                            <label for="mes">Mês</label>
+                            <select class="custom-select d-block w-100" id="mes" required>
                               <option value="" selected disabled>Escolha...</option>
                               <option>Janeiro</option>
                               <option>Fevereiro</option>
@@ -675,26 +694,24 @@
                               <option>Outubro</option>
                               <option>Novembro</option>
                               <option>Dezembro</option>
-
                             </select>
                             <div class="invalid-feedback">
-                              Please provide a valid state.
+                                Digite uma informação válida
                             </div>
                           </div>
                         <div class="col-md-3 mb-3">
-                          <label for="zip">Dia</label>
-                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <label for="dia">Dia</label>
+                          <input type="text" class="form-control" id="dia" placeholder="" required>
                           <div class="invalid-feedback">
-                            Zip code required.
+                            Digite uma informação válida.
                           </div>
                         </div>
                       </div>
                       <hr class="mb-4">
                 <div><div class="order-md-1 mb-3" >
-                    <label for="country">Modelo</label>
-                    <select class="custom-select d-block w-100" id="country" required>
+                    <label for="modelo">Modelo</label>
+                    <select class="custom-select d-block w-100" id="modelo" required>
                       <option value="" selected disabled>Escolha...</option>
-                      
                       <option value="AG">Todos</option>
                       <option value="AF">Calça</option>
                       <option value="AX">Camiseta</option>
@@ -708,27 +725,25 @@
                       <option value="AG">Lenço</option>
                     </select>
                     <div class="invalid-feedback">
-                      Please select a valid country.
+                        Selecione uma opção valida
                     </div>
                   </div>
-
                       <hr class="mb-4">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Tamanho P</label>
+                        <input type="checkbox" class="custom-control-input" id="tamP">
+                        <label class="custom-control-label" for="tamP">Tamanho P</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Tamanho M</label>
+                        <input type="checkbox" class="custom-control-input" id="tamM">
+                        <label class="custom-control-label" for="tamM">Tamanho M</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">Tamanho G</label>
+                        <input type="checkbox" class="custom-control-input" id="tamG">
+                        <label class="custom-control-label" for="tamG">Tamanho G</label>
                      </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Tamanho GG</label>
-    
+                        <input type="checkbox" class="custom-control-input" id="tamGG">
+                        <label class="custom-control-label" for="tamGG">Tamanho GG</label>
                       </div>
                       <hr class="mb-4">
                       <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="sucesso()">Gera Relatório</button>
@@ -739,7 +754,6 @@
             </div>
 
 
-
             <div class="modal" id="modal7" tabindex="-1">
                 <a href="#" class="modal__overlay" aria-label="Fechar"></a>
                 <div class="modal__content">
@@ -748,10 +762,8 @@
                     <h4 class="mb-3">INATIVAR FORNECEDOR</h4>
                     <hr class="mb-4">
                         </div>
-
-
-                      <label for="country">Fornecedor</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <label for="fornecedor">Fornecedor</label>
+                      <select class="custom-select d-block w-100" id="fornecedor" required>
                         <option value="" selected disabled>Escolha...</option>
                         <option value="AX">Look</option>
                         <option value="AL">Belissima</option>
@@ -764,8 +776,8 @@
                       </select>
                       <hr class="mb-4">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Inativar ID existente</label>
+                        <input type="checkbox" class="custom-control-input" id="inatFor">
+                        <label class="custom-control-label" for="inatFor">Inativar ID existente</label>
                         <input type="text" class="form-control" id="zip" placeholder="" required>
                         <div class="invalid-feedback">
                       </div>
@@ -786,22 +798,20 @@
                     <h4 class="mb-3">INATIVAR USUÁRIO</h4>
                     <hr class="mb-4">
                       </div>
-                     
-                      <label for="country">Usuário</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <label for="usuario">Usuário</label>
+                      <select class="custom-select d-block w-100" id="usuario" required>
                         <option value="" selected disabled>Escolha...</option>
                         <option value="AX">Amanda</option>
                         <option value="AL">Maria</option>
                       </select>
                       <hr class="mb-4">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="save-info">
-                        <label class="custom-control-label" for="save-info">Inativar ID existente</label>
+                        <input type="checkbox" class="custom-control-input" id="inatUsu">
+                        <label class="custom-control-label" for="inatUsu">Inativar ID existente</label>
                         <input type="text" class="form-control" id="zip" placeholder="" required>
                         <div class="invalid-feedback">
                       </div>
                       <hr class="mb-4">
-                      
                       <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="sucesso()">Inativar</button>
                     </form>
                   </div>
@@ -810,12 +820,11 @@
             </div>
 
 
-
         <div class="modal" id="modalfim" tabindex="-1">
             <a href="#" class="modal__overlay" aria-label="Fechar"></a>
             <div class="modal__content">
             <a href="#" class="modal__close" aria-label="Fechar">x</a>
-            <div><div class="col-md-8 order-md-1">
+            <div><div class="col-md-7">
                 <section > Seu Produto foi Cadastrado com Sucesso!</section>
             </div>
 
