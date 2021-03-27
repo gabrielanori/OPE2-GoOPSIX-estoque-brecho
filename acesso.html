@@ -14,7 +14,7 @@
   <!-- background="img/fundo.jpg" width="100" heigth="100"-->
   <div class="container" >
     <div class="container-login">
-      <form class="form-box">
+      <form action="./home.html" class="form-box">
         <section class="acesso__logo" >
         <img class="avatar" src="img/logo.png" alt="user login">
         </section>
@@ -22,23 +22,23 @@
           <div class="welcome">Acesso Restrito</div>
         <span>
           <label for="user-name"><img src="img/user-icon.svg" alt="User name"></label>
-          <input type="email" placeholder="Username">
+          <input type="text" placeholder="Username" required>
         </span>
         
         <span>
           <label for="user-password"><img src="img/pass-icon.svg" alt="User password"></label>
-          <input type="password" placeholder="Password">
+          <input type="password" placeholder="Password" required>
         </span>
-        <button onclick="redirecionar()">Login</button>
+        <button >Login</button>
         </section>
       </form>
        <script>
         function redirecionar() {
           event.preventDefault() 
           window.location.href = "home.html";
-          
         }
        </script>
+        <script src="./js/app.js" type="module"></script>
     </div>
   </div>
 
