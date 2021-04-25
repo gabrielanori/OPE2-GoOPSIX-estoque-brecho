@@ -17,9 +17,11 @@
         <img src="./img/logo.png" alt="logo" class="cabecalho__logo">
         <nav>
             <ul class="cabecalho__lista-navegacao">
-                <li class="cabecalho__link"> Seja Bem Vindo ao nosso Controle de Estoque! </li>
+                <li class="cabecalho__link"> Bem Vindo ao Controle de Estoque! </li>
+                <button class="botao"> <a  href="acesso.html"> Logout </a> </button>
              
             </ul>
+           
         </nav>
     </header>
 
@@ -50,7 +52,7 @@
                 </form>
             </section>
             <section class="cartao cadastro">
-                <h1 class="cartao__titulo"> Inativar </h1>
+                <h1 class="cartao__titulo"> Atualizar </h1>
                 <form  class="flex flex--coluna">
                 
                     <button class="botao"><a href="#modal8">Fornecedor</a></button>
@@ -65,7 +67,7 @@
         <div class="modal__content">
         <a href="#" class="modal__close" aria-label="Fechar">x</a>
         <div><div class="col-md-8 order-md-1">
-          <form action="acesso.html">
+          <form>
             <h4 class="mb-3">ENTRADA DE PRODUTO</h4>
             <hr class="mb-4">
                 <div class=" w-100 input-container">
@@ -164,7 +166,7 @@
                   </div>
               </div>
               <hr class="mb-4">
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Efetuar Entrada</button>
+              <button id="btn" class="btn btn-primary btn-lg btn-block" onclick="cadastrar()" type="submit">Efetuar Entrada</button>
             </form>
           </div>
         </div>
@@ -416,7 +418,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text">N°</span>
                           </div>
-                          <input type="tel" class="form-control" id="tel" placeholder="Ex: (99) 99999-9999" pattern="\(?\d{2}\)?\s)?(\d{4,5}\-\d{4}" required>
+                          <input type="tel" class="form-control" id="tel" placeholder="Ex: (99) 99999-9999" ng-pattern="/^\([1-9]{2}\)[0-9]{4,5}-[0-9]{4}$/" required>
                           <div class="invalid-feedback" style="width: 100%;">
                             Digite uma informação válida
                           </div>
@@ -432,7 +434,7 @@
                       </div>
                       <div class="mb-3">
                         <label for="logradouro">Endereço</label>
-                        <input type="text" class="form-control" id="logradouro" placeholder="Ex: Rua Augusta, 222" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" title="Apenas letras" required>
+                        <input type="text" class="form-control" id="logradouro" placeholder="Ex: Rua Augusta, 222" pattern="[a-zA-Z0-9]+" title="Endereço com caracteres alfanuméricos" required>
                         <div class="invalid-feedback">
                             Digite uma informação válida
                         </div>
@@ -538,7 +540,7 @@
                         <br>
                         <div class="mb-3">
                             <label for="numreg">Login</label>
-                            <input type="text" class="form-control" id="numreg" placeholder=""  pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" title="Apenas letras" required>
+                            <input type="text" class="form-control" id="numreg" placeholder="" pattern="[a-zA-Z0-9]+" title="Login com caracteres alfanuméricos" required>
                             <div class="invalid-feedback">
                               Digite uma informação válida
                             </div>
@@ -783,20 +785,20 @@
                   </div>
                       <hr class="mb-4">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="tamP">
-                        <label class="custom-control-label" for="tamP">Tamanho P</label>
+                        <input type="checkbox" class="custom-control-input" id="tP">
+                        <label class="custom-control-label" for="tP">Tamanho P</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="tamM">
-                        <label class="custom-control-label" for="tamM">Tamanho M</label>
+                        <input type="checkbox" class="custom-control-input" id="tM">
+                        <label class="custom-control-label" for="tM">Tamanho M</label>
                       </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="tamG">
-                        <label class="custom-control-label" for="tamG">Tamanho G</label>
+                        <input type="checkbox" class="custom-control-input" id="tG">
+                        <label class="custom-control-label" for="tG">Tamanho G</label>
                      </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="tamGG">
-                        <label class="custom-control-label" for="tamGG">Tamanho GG</label>
+                        <input type="checkbox" class="custom-control-input" id="tGG">
+                        <label class="custom-control-label" for="tGG">Tamanho GG</label>
                       </div>
                       <hr class="mb-4">
                       <label for="codigo">Descrição</label>
@@ -917,7 +919,7 @@
     <script>
         function cadastrar() {
           event.preventDefault() 
-          window.location.href = "cadastro_produto.html";
+          window.location.href = "acesso.html";
         }
 
         function baixar() {
@@ -930,7 +932,7 @@
           window.location.href = "#modalfim";
         }
        </script>
-
-    <script src="./js/app.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+   
 </body>
 </html>

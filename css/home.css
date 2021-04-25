@@ -50,10 +50,18 @@ h1{
     display: flex;
 }
 
-.cabecalho__link {
+.cabecalho__link li {
     margin-left: 1rem;
     font-size: 18px;
+    display: flex;
+    
 }
+
+li {
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+
 .cartao {
     background-color: #f1f0f1;
     border-radius: 5px;

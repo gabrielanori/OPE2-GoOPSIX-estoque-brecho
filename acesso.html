@@ -22,12 +22,12 @@
           <div class="welcome">Acesso Restrito</div>
         <span>
           <label for="user-name"><img src="img/user-icon.svg" alt="User name"></label>
-          <input type="text" placeholder="Username" required>
+          <input type="text" placeholder="Username" pattern="[a-zA-Z0-9]+" title="Login com caracteres alfanuméricos" required>
         </span>
         
         <span>
           <label for="user-password"><img src="img/pass-icon.svg" alt="User password"></label>
-          <input type="password" placeholder="Password" required>
+          <input type="password" placeholder="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$" title="Mínimo 4 caracteres, pelo menos 1 letra e 1 número" required>
         </span>
         <button >Login</button>
         </section>

@@ -18,3 +18,5 @@ inputs.forEach(input => {
         valida(evento.target)
     })
 })
+
+
