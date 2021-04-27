@@ -1,3 +1,10 @@
+.bg {
+
+    background-image: url(../img/fundo.jpg);
+    background-attachment: fixed;
+    background-size: 100% 99.5%;
+  }
+
 .flex {
 	display: flex;
     justify-content: flex-start;
@@ -66,13 +73,15 @@ li {
     background-color: #f1f0f1;
     border-radius: 5px;
     width: 100%;
-    padding: 1.3rem;
+    padding: 1.7rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-  
-    margin-top: 30px;
+    margin-top: 15px;
     justify-content: space-between;
+    box-shadow: var(--sombra);
+    background-color: #fcf8f3;
+
 }
 
 .cartao__titulo {
@@ -129,7 +138,7 @@ li {
 
 .botao {
     display: block;
-    background-color:#e2dfd3;
+    background-color:#ece9db;
     border-radius: 5px 5px 5px 5px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
